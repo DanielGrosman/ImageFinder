@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="720.79999999999995" y="133.5832083958021"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Search-->
         <scene sceneID="rUn-uv-5jH">
             <objects>
-                <viewController id="43Q-4A-Fvk" customClass="SearchViewController" sceneMemberID="viewController">
+                <viewController title="Search" id="43Q-4A-Fvk" customClass="SearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rvW-Qy-7yh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,6 +145,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.68888300657272339" green="0.71366006135940552" blue="0.73448425531387329" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="kaF-gN-kGK" firstAttribute="leading" secondItem="PiA-Er-9si" secondAttribute="leading" constant="16" id="Lmf-4X-ehR"/>
                             <constraint firstItem="PiA-Er-9si" firstAttribute="bottom" secondItem="kaF-gN-kGK" secondAttribute="bottom" constant="246" id="N6F-OM-Vxb"/>
@@ -156,19 +157,27 @@
                             <constraint firstItem="PiA-Er-9si" firstAttribute="trailing" secondItem="kaF-gN-kGK" secondAttribute="trailing" constant="16" id="zDR-f7-QqB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PiA-Er-9si"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Gal-Ry-7ek" appends="YES" id="pjc-2K-an4"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="searchTextField" destination="qTc-Ft-5mL" id="QBZ-YF-lML"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fB-xY-RBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Gal-Ry-7ek">
+                    <connections>
+                        <action selector="screenTapped:" destination="43Q-4A-Fvk" id="Mpx-Xp-IfP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="720.79999999999995" y="856.82158920539734"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Map View-->
         <scene sceneID="JTR-cR-pYj">
             <objects>
-                <viewController id="i2U-uF-omS" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController title="Map View" id="i2U-uF-omS" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lch-25-oaN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

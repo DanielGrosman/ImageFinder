@@ -19,6 +19,9 @@
     [self.delegate fetchData:self.searchTextField.text];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+- (IBAction)screenTapped:(UITapGestureRecognizer *)sender {
+    [self.searchTextField resignFirstResponder];
+}
 
 
 @end
